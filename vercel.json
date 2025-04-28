@@ -1,0 +1,33 @@
+{
+  "version": 2,
+  "buildCommand": "npm run build",
+  "installCommand": "npm install",
+  "framework": "nextjs",
+  "regions": ["gru1"],
+  "headers": [
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "DENY"
+        },
+        {
+          "key": "X-XSS-Protection",
+          "value": "1; mode=block"
+        }
+      ]
+    }
+  ],
+  "build": {
+    "env": {
+      "NEXT_PUBLIC_DIRECTUS_API_URL": "@next_public_directus_api_url",
+      "DIRECTUS_API_TOKEN": "@directus_api_token",
+      "JWT_SECRET": "@jwt_secret"
+    }
+  }
+}
