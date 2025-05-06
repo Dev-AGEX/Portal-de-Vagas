@@ -22,5 +22,10 @@
         }
       ]
     }
-  ]
+  ],
+  "env": {
+    "NEXT_PUBLIC_DIRECTUS_API_URL": "https://directus.agex.com.br",
+    "DIRECTUS_API_TOKEN": "@directus_api_token",
+    "JWT_SECRET": "@jwt_secret"
+  }
 }
