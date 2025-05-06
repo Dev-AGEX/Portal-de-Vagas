@@ -25,7 +25,7 @@
   ],
   "env": {
     "NEXT_PUBLIC_DIRECTUS_API_URL": "https://directus.agex.com.br",
-    "DIRECTUS_API_TOKEN": "@directus_api_token",
+    "DIRECTUS_API_TOKEN": "TFh5hvC6wApM0yGyIr7P9vtwnr_sbz1v",
     "JWT_SECRET": "@jwt_secret",
     "NEXT_PUBLIC_TINYMCE_KEY_API": "@tinymce_key_api"
   }
