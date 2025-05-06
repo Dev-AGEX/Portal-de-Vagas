@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "postinstall": "npm install argon2"
+    "postinstall": "npm rebuild argon2 --build-from-source"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
