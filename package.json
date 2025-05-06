@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "postinstall": "npm rebuild argon2 --build-from-source"
   },
   "dependencies": {
     "@hookform/resolvers": "^3.9.0",
@@ -74,6 +75,7 @@
     "@types/jsonwebtoken": "^9.0.9",
     "@types/node": "^22.14.0",
     "@types/react": "18.3.20",
+    "node-gyp": "^11.2.0",
     "typescript": "5.8.2"
   }
 }

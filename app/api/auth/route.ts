@@ -1,5 +1,7 @@
 import { NextResponse } from 'next/server';
 import * as argon2 from 'argon2';
+import bcrypt from 'bcryptjs';
+import { sign } from 'jsonwebtoken';
 
 export async function POST(request: Request) {
   try {
@@ -22,7 +24,10 @@ export async function POST(request: Request) {
       console.log('Usuário não encontrado');
     }
 
-    const isValidPassword = await argon2.verify(user.Senha, body.Senha);
+    // Substituir:
+    // const isValidPassword = await argon2.verify(user.Senha, body.Senha);
+    // por:
+    const isValidPassword = await bcrypt.compare(body.Senha, user.Senha);
 
     if (!isValidPassword) {
       return NextResponse.json({ error: 'Senha incorreta' }, { status: 401 });
